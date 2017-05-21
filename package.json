@@ -25,6 +25,7 @@
     "rails-erb-loader": "^5.0.1",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "react-router-dom": "^4.1.1",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.17.0",
     "webpack": "^2.5.1",
@@ -34,6 +35,7 @@
   "devDependencies": {
     "babel-plugin-syntax-function-bind": "^6.13.0",
     "babel-preset-flow": "^6.23.0",
+    "babel-preset-react-hmre": "^1.1.1",
     "eslint": "^3.19.0",
     "eslint-plugin-react": "^7.0.1",
     "flow-bin": "^0.46.0",

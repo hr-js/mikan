@@ -1,0 +1,9 @@
+import React from 'react'
+import ReactDom from 'react-dom'
+
+const App = () => <div>Hello, Mikan</div>
+
+ReactDom.render(
+  <App/>,
+  document.getElementById('index')
+)
