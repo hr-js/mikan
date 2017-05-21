@@ -8,6 +8,7 @@
     ],
     "react",
     "latest",
+    "flow"
   ],
   "plugins": [
     "syntax-function-bind"

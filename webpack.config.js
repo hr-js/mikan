@@ -1,12 +1,12 @@
-const path = require('path');
+const path = require('path')
 module.exports = {
-  context: __dirname + '/app/assets/javascripts',
+  context: __dirname + '/js/src',
   entry: {
     login: './login.js',
     index: './index.js'
   },
   output: {
-    path: path.join(__dirname, '/app/assets/javascripts/build'),
+    path: path.join(__dirname, '/js/build'),
     filename: '[name].js'
   },
   module: {
