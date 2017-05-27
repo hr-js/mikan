@@ -1,24 +1,16 @@
-# README
+# Mikan
+## Make Develop Environment
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```
+git clone https://github.com/hr-js/mikan.git
+cd mikan
+yarn install && bundle install
+```
 
-Things you may want to cover:
+# Run development server
 
-* Ruby version
+You need `foreman` gem.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+foreman start
+```
