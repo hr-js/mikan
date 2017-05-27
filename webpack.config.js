@@ -18,6 +18,11 @@ module.exports = {
     }]
   },
   resolve: {
+    modules: [
+      'node_modules',
+      path.resolve('./front/src/presentations'),
+      path.resolve('./front/src/containers')
+    ],
     extensions: ['.js', '.jsx']
   },
   devServer: {
