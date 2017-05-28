@@ -4,7 +4,6 @@ const webpack = require('webpack')
 module.exports = {
   context: __dirname + '/front/src',
   entry: {
-    login: './login.jsx',
     index: './index.jsx'
   },
   output: {
@@ -28,7 +27,13 @@ module.exports = {
   devServer: {
     contentBase: 'front/bundle',
     inline: true,
-    hot: true
+    hot: true,
+    historyApiFallback: true,
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
+      'Access-Control-Allow-Headers': 'X-Requested-With, content-type, Authorization'
+    }
   },
   devtool: 'source-map',
   plugins: [
