@@ -1,7 +1,12 @@
+// @flow
 import React from 'react'
-import ReactDom from 'react-dom'
 
-ReactDom.render(
-  <login/>,
-  document.getElementById('login')
-)
+export default class Login extends React.Component {
+  render(){
+    return(
+      <div>
+        this is login page.
+      </div>
+    )
+  }
+}
