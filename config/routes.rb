@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  post '/create_user' => 'user#create', format: :json
   post 'user_token' => 'user_token#create'
   resources :user, :only => [:index, :show]
   post '/graphql', to: 'graphql#query'

@@ -1,23 +1,32 @@
 // @flow
 import React from 'react'
+import PropTypes from 'prop-types'
 import axios from 'axios'
 
-function createUser(data){
-  axios.post('http://localhost:5000/create_user',data)
-}
-
 export default class SignUp extends React.Component{
+  static get propTypes(){
+    return {
+      history: PropTypes.object.isRequired
+    }
+  }
+
   handleSubmit(e){
-    const target = e.target
-    const router = this.context.router
+    const { name, email, password, password_confirmation } = e.target
+    const user = {
+      user: {
+        name: name.value.trim(),
+        email: email.value.trim(),
+        password: password.value.trim(),
+        password_confirmation: password_confirmation.value.trim()
+      }
+    }
+    const createUser = data =>
+      axios.post('http://localhost:5000/create_user',data)
+
     e.preventDefault()
 
-    createUser({
-      name: target.name.value.trim(),
-      email: target.email.value.trim(),
-      password: target.password.value.trim(),
-      password_confirmation: target.password_confirmation.value.trim()
-    }).then(() => router.replace('/login'))
+    createUser(user)
+      .then(() => this.props.history.push('/login'))
       .catch((data) => window.console.log(data.error))
   }
   render(){
